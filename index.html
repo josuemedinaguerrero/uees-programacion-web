@@ -5,38 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Josué Medina | Desarrollador Web</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
   <body>
     <header>
-      <h1>Josué<span>Medina</span></h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Sobre Mí</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+      <div class="header-container">
+        <h1>Josué<span>Medina</span></h1>
+        <nav>
+          <button class="menu-toggle" aria-label="Menú">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-menu">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+            </li>
+            <li>
+              <a href="nosotros.html"><i class="fas fa-user"></i> Sobre Mí</a>
+            </li>
+            <li>
+              <a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
       <section class="hero">
-        <h2>Desarrollador Web Full Stack</h2>
-        <p>Especializado en crear soluciones digitales robustas y modernas desde Ecuador para el mundo.</p>
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Código y tecnología" />
+        <div class="hero-content">
+          <h2>Desarrollador Web Full Stack</h2>
+          <p>Especializado en crear soluciones digitales robustas y modernas desde Ecuador para el mundo.</p>
+          <a href="contacto.html" class="btn-primary">Contáctame</a>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Código y tecnología" />
+        </div>
       </section>
 
       <section class="servicios">
         <h3>Servicios Profesionales</h3>
-        <ul>
-          <li><strong>Desarrollo Web:</strong> Aplicaciones dinámicas y escalables.</li>
-          <li><strong>Mantenimiento:</strong> Optimización de sistemas existentes.</li>
-          <li><strong>Consultoría Técnica:</strong> Apoyo en la arquitectura de tus proyectos.</li>
-        </ul>
+        <div class="servicios-grid">
+          <div class="servicio-card">
+            <i class="fas fa-code"></i>
+            <h4>Desarrollo Web</h4>
+            <p>Aplicaciones dinámicas y escalables con las últimas tecnologías.</p>
+          </div>
+          <div class="servicio-card">
+            <i class="fas fa-tools"></i>
+            <h4>Mantenimiento</h4>
+            <p>Optimización y actualización de sistemas existentes.</p>
+          </div>
+          <div class="servicio-card">
+            <i class="fas fa-lightbulb"></i>
+            <h4>Consultoría Técnica</h4>
+            <p>Apoyo estratégico en la arquitectura de tus proyectos.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="portafolio">
+        <h3>Portafolio Destacado</h3>
+        <div class="portafolio-grid">
+          <div class="proyecto-card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Proyecto 1" />
+            <div class="proyecto-info">
+              <h4>Sistema de Gestión</h4>
+              <p>Plataforma completa para administración empresarial</p>
+              <div class="tecnologias">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+              </div>
+            </div>
+          </div>
+          <div class="proyecto-card">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Proyecto 2" />
+            <div class="proyecto-info">
+              <h4>E-commerce Moderno</h4>
+              <p>Tienda online con pasarela de pagos integrada</p>
+              <div class="tecnologias">
+                <span>Vue.js</span>
+                <span>Laravel</span>
+                <span>MySQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="proyecto-card">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=500&q=80" alt="Proyecto 3" />
+            <div class="proyecto-info">
+              <h4>App Móvil Híbrida</h4>
+              <p>Aplicación multiplataforma para gestión de tareas</p>
+              <div class="tecnologias">
+                <span>React Native</span>
+                <span>Firebase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tecnologias-section">
+        <h3>Tecnologías que Domino</h3>
+        <div class="tech-grid">
+          <div class="tech-item"><i class="fab fa-html5"></i> HTML5</div>
+          <div class="tech-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+          <div class="tech-item"><i class="fab fa-js"></i> JavaScript</div>
+          <div class="tech-item"><i class="fab fa-react"></i> React</div>
+          <div class="tech-item"><i class="fab fa-node"></i> Node.js</div>
+          <div class="tech-item"><i class="fab fa-python"></i> Python</div>
+          <div class="tech-item"><i class="fab fa-git-alt"></i> Git</div>
+          <div class="tech-item"><i class="fas fa-database"></i> Databases</div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 Josué Medina - Desarrollador Web en Ecuador</p>
+      <div class="footer-content">
+        <p>&copy; 2026 Josué Medina - Desarrollador Web en Ecuador</p>
+        <div class="social-links">
+          <a href="https://github.com/josuemedinaguerrero" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/josuemedinadev/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

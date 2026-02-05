@@ -5,39 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre Mí | Josué Medina</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
   <body>
     <header>
-      <h1>Josué<span>Medina</span></h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Sobre Mí</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+      <div class="header-container">
+        <h1>Josué<span>Medina</span></h1>
+        <nav>
+          <button class="menu-toggle" aria-label="Menú">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-menu">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+            </li>
+            <li>
+              <a href="nosotros.html"><i class="fas fa-user"></i> Sobre Mí</a>
+            </li>
+            <li>
+              <a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
       <section class="bio">
-        <h2>Mi Trayectoria</h2>
-        <p>Hola, soy Josué Medina. Me apasiona transformar problemas complejos en interfaces intuitivas y código eficiente.</p>
+        <div class="bio-header">
+          <div class="bio-image">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Josué Medina" />
+          </div>
+          <div class="bio-intro">
+            <h2>Mi Trayectoria</h2>
+            <p>Hola, soy Josué Medina. Me apasiona transformar problemas complejos en interfaces intuitivas y código eficiente.</p>
+          </div>
+        </div>
 
-        <h3>Mis Repositorios:</h3>
-        <p>Puedes revisar mis proyectos y contribuciones en mi perfil oficial de <strong>GitHub</strong>:</p>
-        <a href="https://github.com/josuemedinaguerrero" target="_blank" class="btn-link">Ver GitHub de Josué</a>
+        <div class="experiencia">
+          <h3><i class="fas fa-briefcase"></i> Experiencia</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h4>Desarrollador Full Stack</h4>
+              <p class="periodo">2023 - Presente</p>
+              <p>Desarrollo de aplicaciones web completas utilizando tecnologías modernas.</p>
+            </div>
+            <div class="timeline-item">
+              <h4>Desarrollador Frontend</h4>
+              <p class="periodo">2021 - 2023</p>
+              <p>Creación de interfaces responsivas y optimizadas para diferentes dispositivos.</p>
+            </div>
+          </div>
+        </div>
 
-        <h3>Habilidades Principales:</h3>
-        <ul>
-          <li>Desarrollo con Tecnologías Modernas</li>
-          <li>Arquitectura de Software</li>
-          <li>Resolución de Problemas</li>
-        </ul>
+        <div class="habilidades-section">
+          <h3><i class="fas fa-star"></i> Habilidades Principales</h3>
+          <div class="habilidades-grid">
+            <div class="habilidad-item">
+              <i class="fas fa-laptop-code"></i>
+              <h4>Desarrollo con Tecnologías Modernas</h4>
+              <p>Dominio de frameworks y librerías actuales</p>
+            </div>
+            <div class="habilidad-item">
+              <i class="fas fa-project-diagram"></i>
+              <h4>Arquitectura de Software</h4>
+              <p>Diseño de sistemas escalables y mantenibles</p>
+            </div>
+            <div class="habilidad-item">
+              <i class="fas fa-puzzle-piece"></i>
+              <h4>Resolución de Problemas</h4>
+              <p>Análisis y solución efectiva de desafíos técnicos</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="github-section">
+          <h3><i class="fab fa-github"></i> Mis Repositorios</h3>
+          <p>Puedes revisar mis proyectos y contribuciones en mi perfil oficial de GitHub:</p>
+          <a href="https://github.com/josuemedinaguerrero" target="_blank" class="btn-link"> <i class="fab fa-github"></i> Ver GitHub de Josué </a>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>Sígueme en <a href="https://www.linkedin.com/in/josuemedinadev/" target="_blank" style="color: #00d4ff">LinkedIn</a></p>
+      <div class="footer-content">
+        <p>Sígueme en <a href="https://www.linkedin.com/in/josuemedinadev/" target="_blank">LinkedIn</a></p>
+        <div class="social-links">
+          <a href="https://github.com/josuemedinaguerrero" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/josuemedinadev/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
