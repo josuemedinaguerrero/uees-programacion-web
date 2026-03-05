@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explorar Proyectos | Josué Medina</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Josué<span>Medina</span></h1>
+        <nav>
+          <button class="menu-toggle" aria-label="Menú">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-menu">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+            </li>
+            <li>
+              <a href="nosotros.html"><i class="fas fa-user"></i> Sobre Mí</a>
+            </li>
+            <li>
+              <a href="proyectos.html" class="active"><i class="fas fa-magnifying-glass"></i> Explorar</a>
+            </li>
+            <li>
+              <a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO DE BÚSQUEDA -->
+      <section class="busqueda-hero">
+        <div class="busqueda-hero-content">
+          <h2><i class="fab fa-github"></i> Explorar Repositorios GitHub</h2>
+          <p>Busca proyectos de código abierto en tiempo real usando la API pública de GitHub.</p>
+
+          <!-- FORMULARIO DE BÚSQUEDA -->
+          <form id="search-form" class="search-form" autocomplete="off">
+            <div class="search-input-group">
+              <i class="fas fa-magnifying-glass search-icon"></i>
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Ej: react dashboard, python machine learning, nodejs api..."
+                aria-label="Buscar repositorios"
+              />
+              <button type="submit" class="btn-search"><i class="fas fa-search"></i> Buscar</button>
+            </div>
+          </form>
+
+          <!-- Búsquedas sugeridas -->
+          <div class="sugerencias">
+            <span>Populares:</span>
+            <button class="sugerencia-btn" onclick="buscarRapido('javascript framework')">JavaScript Framework</button>
+            <button class="sugerencia-btn" onclick="buscarRapido('react hooks')">React Hooks</button>
+            <button class="sugerencia-btn" onclick="buscarRapido('nodejs rest api')">Node.js REST API</button>
+            <button class="sugerencia-btn" onclick="buscarRapido('python data science')">Python Data Science</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE RESULTADOS -->
+      <section class="resultados-section">
+        <p id="resultado-mensaje" class="resultado-mensaje"></p>
+        <div id="resultados-container" class="resultados-grid">
+          <!-- Estado inicial: mensaje de bienvenida -->
+          <div class="estado-inicial">
+            <i class="fab fa-github"></i>
+            <h3>Descubre proyectos Open Source</h3>
+            <p>Escribe cualquier tecnología, framework o tema en el buscador para explorar repositorios de GitHub en tiempo real.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2026 Josué Medina - Datos obtenidos de la <a href="https://docs.github.com/en/rest" target="_blank">API Pública de GitHub</a></p>
+        <div class="social-links">
+          <a href="https://github.com/josuemedinaguerrero" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/josuemedinadev/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Función para búsquedas rápidas desde los botones sugeridos
+      function buscarRapido(termino) {
+        document.getElementById("search-input").value = termino;
+        buscarRepositorios(termino);
+      }
+    </script>
+  </body>
+</html>
